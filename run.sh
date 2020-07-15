@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd `dirname $0`
+
 cp sources.list /etc/apt/
 
 apt update && apt upgrade -y
