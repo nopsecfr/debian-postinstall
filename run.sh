@@ -35,3 +35,5 @@ chmod 0440 /etc/sudoers.d/vagrant; \
 perl -p -i -e 's/(?<=iface\s).+?(?=\s)/eth0/g' /etc/network/interfaces; \
 perl -p -i -e 's/eth0 inet loopback/lo inet loopback/g' /etc/network/interfaces; \
 perl -p -i -e 's/(?<=hotplug\s).+?(?=\s)/eth0/g' /etc/network/interfaces
+
+eject
