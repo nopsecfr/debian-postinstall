@@ -22,6 +22,8 @@ cp bashrc /home/vagrant/.bashrc
 cp bashrc /etc/skel/.bashrc
 sed -i 's/32m/31m/g' /root/.bashrc
 
+cp blacklist.conf /etc/mobprob.d/
+update-initramfs -u
 
 
 mkdir /home/vagrant/.ssh/
