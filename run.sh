@@ -8,7 +8,6 @@ apt update && apt upgrade -y
 apt install -y \
 	dnsutils \
 	net-tools \
-	openssh-server \
 	open-vm-tools \
 	sudo \
 	vim \
@@ -39,3 +38,5 @@ perl -p -i -e 's/eth0 inet loopback/lo inet loopback/g' /etc/network/interfaces;
 perl -p -i -e 's/(?<=hotplug\s).+?(?=\s)/eth0/g' /etc/network/interfaces
 
 eject
+
+apt install -y openssh-server
