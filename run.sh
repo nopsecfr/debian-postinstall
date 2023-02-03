@@ -1,5 +1,7 @@
 #!/bin/bash
 
+exec > /tmp/run.log 2>&1
+
 cd `dirname $0`
 
 CODENAME=$(hostnamectl | grep "Operating System" | grep -oP "(?<=\().+?(?=\))" | tr -d '\n')
