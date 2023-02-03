@@ -4,9 +4,7 @@ exec > /tmp/run.log 2>&1
 
 cd `dirname $0`
 
-CODENAME=$(hostnamectl | grep "Operating System" | grep -oP "(?<=\().+?(?=\))" | tr -d '\n')
-
-cp "sources.list-$CODENAME" /etc/apt/sources.list
+cp "sources.list-$1" /etc/apt/sources.list
 
 apt update && apt upgrade -y
 apt install -y \
