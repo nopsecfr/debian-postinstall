@@ -2,7 +2,9 @@
 
 cd `dirname $0`
 
-cp sources.list /etc/apt/
+CODENAME=$(hostnamectl | grep "Operating System" | grep -oP "(?<=\().+?(?=\))" | tr -d '\n')
+
+cp "sources.list-$CODENAME" /etc/apt/sources.list
 
 apt update && apt upgrade -y
 apt install -y \
@@ -11,6 +13,7 @@ apt install -y \
 	open-vm-tools \
 	sudo \
 	vim \
+	htop \
 	wget
 
 
